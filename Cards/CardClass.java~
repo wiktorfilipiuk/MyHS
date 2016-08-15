@@ -1,0 +1,21 @@
+package Cards;
+
+public enum CardClass {
+  BASIC(0), 
+  DRUID(1), 
+  HUNTER(2), 
+  MAGE(3), 
+  PALADIN(4), 
+  PRIEST(5), 
+  ROGUE(6), 
+  SHAMAN(7), 
+  WARLOCK(8), 
+  WARRIOR(9);
+  
+  int value;
+  
+  private CardClass(int value){
+    this
+  }
+  
+};
