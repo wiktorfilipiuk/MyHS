@@ -10,10 +10,14 @@ public class MinionCard extends Card{
   private int attack;
   private int hp;
   
+  /* Default class' constructor */
+  public MinionCard(){
+    super();
+  }
+  
   /* Class' constructor */
   public MinionCard(String name, int cost, int attack, int hp){
-    this.name = name;
-    this.cost = cost;
+    super(name, cost);
     this.attack = attack;
     this.hp = hp;
   }
@@ -60,5 +64,21 @@ public class MinionCard extends Card{
     
     System.out.println(this.name + "(" + this.hp + ")         " + target.getName() + "(" + target.getHp() + ")");
   }
+  @Override
+  protected void specialEffect(){}
+  @Override
+  public void showCardInfo(){
+    System.out.println("Minion: " + super.getName() + ", Cost: " + super.getCost() 
+		       + ", Attack: " + this.getAttack() + ", HP: " + this.getHp());
+  }
   
 }
+
+
+
+
+
+
+
+
+

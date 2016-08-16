@@ -8,13 +8,20 @@ import Cards.CardClass;
  */
 
 
-public class Card{
+public abstract class Card{
 
   protected String name;
   protected int cost;
   //protected String rarityType;
   //protected String classType;
+  /* Default constructor */
+  public Card() {}
   
+  /* Constructor */
+  public Card(String name, int cost){
+    this.name = name;
+    this.cost = cost;
+  }
   // Get methods
   /* Method returns name of the card */
   public String getName(){
@@ -36,8 +43,10 @@ public class Card{
     this.cost = cost;
   }
   
-  public void finalize(){
+  protected void finalize(){
     System.out.println(this.name + " is being destroyed!");
   }
   
+  abstract protected void specialEffect();
+  abstract protected void showCardInfo();
 }

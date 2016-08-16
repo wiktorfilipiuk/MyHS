@@ -1,13 +1,20 @@
 package Players;
 
-import Cards.Card;
+import java.util.*;
 
-public class Player {
+import Cards.Card;
+import Board.PlayerBoardInterface;
+import CardDatabase.CardsDB;
+
+public class Player implements PlayerBoardInterface{
 
   private final String playerName;
   private String className;
+  
   private Card[] deck = new Card[30];
   private int lastCardNumber = 0;
+  List<Card> hand = new ArrayList<Card>(); 
+  
   
   /* Class' constructor */
   public Player(String playerName){
@@ -61,6 +68,30 @@ public class Player {
       System.out.println(i + ": " + deck[i].getName());
     }
   }
+
+  public void putCardToHand(Card card){
+    this.hand.add(card);
+  }
+  
+  /* Method implementation from the PlayerBoardInterface */
+  @Override
+  public void playCard(){
+    
+  }
+  
+  @Override
+  public void mulligan(){
+    
+  }
+  
+
   
   
 }
+
+
+
+
+
+
+

@@ -15,6 +15,6 @@ public class SpellCard extends Card{
   protected void specialEffect(){}
   @Override
   public void showCardInfo(){
-    System.out.println("Minion: " + super.getName() + ", Cost: " + super.getCost() );
+    System.out.println("Minion: " + this.getName() + ", Cost: " + this.getCost() );
   }
 }

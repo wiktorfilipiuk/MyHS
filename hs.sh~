@@ -1,5 +1,10 @@
 clear
 
+javac CardDatabase/CardsDB.java
+
+javac Board/PlayerBoardInterface.java
+javac Board/Board.java
+
 javac Cards/Card.java
 javac Cards/MinionCard.java
 javac Cards/WeaponCard.java
@@ -8,4 +13,4 @@ javac Cards/SpellCard.java
 javac Players/Player.java
 
 javac playHS.java
-java playHS "Mesuri"
+java playHS -filepath /CardDatabase/cardsDB.txt -p1 Mesuri -p2 Monoris

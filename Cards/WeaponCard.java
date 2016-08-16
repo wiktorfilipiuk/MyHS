@@ -4,10 +4,14 @@ public class WeaponCard extends Card {
   private int durability;
   private int attack;
   
+  /* Default constructor */
+  public WeaponCard(){
+    super();
+  }
+  
   /* Constructor */
   public WeaponCard(String name, int cost, int attack, int durability){
-    this.name = name;
-    this.cost = cost;
+    super(name, cost);
     this.durability = durability;
     this.attack = attack;
   }
@@ -44,7 +48,11 @@ public class WeaponCard extends Card {
     this.durability -= 1;
     System.out.println(this.name + "(" + this.durability + ") attacks " + target.getName() + "(" + target.getHp() + ")");
    }
-  
-  
-  
+  @Override
+  protected void specialEffect(){}
+  @Override
+  public void showCardInfo(){
+    System.out.println("Weapon: " + super.getName() + ", Cost: " + super.getCost() 
+		       + ", Attack: " + this.getAttack() + ", Durability: " + this.getDurability());
+  }
 }

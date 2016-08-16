@@ -1,0 +1,23 @@
+Minion Stonetusk Boar 1 1 1
+Minion Murloc Raider 1 2 1
+Minion River Crocolisk 2 2 3
+Minion Bloodfen Raptor 2 3 2
+Minion Novice Engineer 2 1 1
+Minion Wolfrider 3 3 1
+Minion Raid Leader 3 2 2
+Minion Magma Rager 3 5 1
+Minion Sen'jin Shieldmasta 4 3 5
+Minion Oasis Snapjaw 4 2 7
+Minion Nightblade 5 4 4
+Minion Reckless Rocketeer 6 5 2
+Minion Boulderfist Ogre 6 6 7
+Weapon Light's Justice 1 1 4
+Weapon Cursed Blade 1 2 3
+Weapon Stormforged Axe 2 2 3
+Weapon Glaivezooka 2 2 2
+Weapon Fiery War Axe 2 3 2
+Weapon Argent Lance 2 2 2
+Weapon Truesilver Champion 4 4 2
+Weapon Death's Bite 4 4 2
+Weapon Doomhammer 5 2 8
+Weapon Gorehowl 7 7 1
