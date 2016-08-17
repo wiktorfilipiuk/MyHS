@@ -5,6 +5,8 @@ import java.util.*;
 import Cards.Card;
 import Board.PlayerBoardInterface;
 import CardDatabase.CardsDB;
+import Classes.*;
+
 
 public class Player implements PlayerBoardInterface{
 
@@ -15,30 +17,47 @@ public class Player implements PlayerBoardInterface{
   private int lastCardNumber = 0;
   List<Card> hand = new ArrayList<Card>(); 
   
+  private Classes myClass;
   
   /* Class' constructor */
   public Player(String playerName){
     this.playerName = playerName;
   }
   
-  // Get methods
+  //---------- Get methods ----------
   /* Method returns name of the player. */
   public String getPlayerName(){
     return this.playerName;
   }
-  
   /* Method returns name of the player's class. */
   public String getClassName(){
     return this.className;
   }
   
-  // Set methods
+  //---------- Set methods ----------
   /* Method sets name of the player's class. */
   public void setClassName(String className){
     this.className = className;
   }
+  public void setClass(String myClass){
+    this.setClassName(myClass);
+    switch(this.className){
+      case "Druid":   this.myClass = new Druid();   break;
+      case "Hunter":  this.myClass = new Hunter();  break;
+      case "Mage":    this.myClass = new Mage();    break;
+      case "Paladin": this.myClass = new Paladin(); break;
+      case "Priest":  this.myClass = new Priest();  break;
+      case "Rogue":   this.myClass = new Rogue();   break;
+      case "Shaman":  this.myClass = new Shaman();  break;
+      case "Warlock": this.myClass = new Warlock(); break;
+      case "Warrior": this.myClass = new Warrior(); break; 
+    }
+  }
   
-  // Remaining methods
+  
+  
+  
+  //---------- Casual methods ----------
   /* Method adds a single card to the deck. */
   public void addCardToDeck(Card card){
     this.deck[this.lastCardNumber] = card;
@@ -72,6 +91,8 @@ public class Player implements PlayerBoardInterface{
   public void putCardToHand(Card card){
     this.hand.add(card);
   }
+  
+  //---------- Abstract methods ----------
   
   /* Method implementation from the PlayerBoardInterface */
   @Override

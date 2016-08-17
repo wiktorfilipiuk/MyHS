@@ -1,7 +1,7 @@
 import Cards.*;
 import Board.*;
 import Players.*;
-import cardDatabase.*;
+import CardDatabase.*;
 
 public class playHS{
 
@@ -28,31 +28,19 @@ public class playHS{
 	  filepath = System.getProperty("user.dir").concat(filepath);
 	  System.out.println("Reading available cards from the file: " + args[i+1]);
 	}
+	else if(args[i].equals("-c1")){
+	  player1.setClass(args[i+1]);
+	}
+	else if(args[i].equals("-c2")){
+	  
+	}
       }
     }
     
     CardsDB db = new CardsDB(filepath);
     db.loadDatabase();
-//     db.showAvailableCards();
     
-//     MinionCard dw = new MinionCard("Deathwing", 10, 12, 12);
-//     MinionCard janusz = new MinionCard("Silverhand Recruit", 0, 1, 1);
-//     WeaponCard winaxe = new WeaponCard("Fiery Waraxe", 2, 3, 2);
-//     
-//     Player mesuri = new Player("Mesuri");   
-//     Card multipleCards[] = {janusz, janusz, janusz, janusz, janusz,
-// 			    janusz, janusz, janusz, janusz, janusz,
-// 			    janusz, janusz, janusz, janusz, janusz,
-// 			    janusz, janusz, janusz, janusz, janusz,
-// 			    janusz, janusz, janusz, janusz, janusz,
-// 			    janusz, janusz, janusz, janusz, janusz};
-//     mesuri.addCardToDeck(winaxe);
-//     mesuri.addCardToDeck(winaxe);
-//     mesuri.addCardToDeck(winaxe);
-//     mesuri.addCardToDeck(multipleCards);
-//     
-//     //mesuri.showDeck();
-//     System.out.println(multipleCards.length);
+    
     
     
     System.out.print("Hearthstone dziala!\n");

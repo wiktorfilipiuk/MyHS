@@ -1,0 +1,37 @@
+package Classes;
+
+public class Warrior extends Classes {
+  
+  public Warrior(){
+    this.myClassName = "Warrior";
+  }
+  
+  @Override
+  void useHeroPower(){
+    
+  }
+  @Override
+  String makeVoiceGreet(){
+    return(getClassName + " says hello!");
+  }
+  @Override
+  String makeVoiceFarewell(){
+    return(getClassName + " says goodbye!");
+  }
+  @Override
+  String makeVoiceWow(){
+    return(getClassName + " says WoW!");
+  }
+  @Override
+  String makeVoiceApologize(){
+    return(getClassName + " is sorry!");
+  }
+  @Override
+  String makeVoiceMistake(){
+    return(getClassName + " made a mistake");
+  }
+  @Override
+  String makeVoiceTaunt(){
+    return(getClassName + "says you're dummy!");
+  }
+}
